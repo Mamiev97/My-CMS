@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .forgot-password {
+            text-align: right;
+            font-size: 14px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Добро пожаловать.</h2>
+    <h3>Пройдите аутентификацию или зарегистрируйтесь.</h3>
+
+    <form action="/" method="post">
+        <h3>Авторизация</h3>
+
+        <label for="email_auth">Email:</label>
+        <input type="email" id="email_auth" name="email_auth" required>
+
+        <label for="password_auth">Пароль:</label>
+        <input type="password" id="password_auth" name="password_auth" required>
+
+        <input type="submit" value="Войти">
+        <br>
+        <p class="forgot-password"><a href="/reset_password">Забыли пароль?</a></p>
+        <p>Нет аккаунта? <a href="/registration">Зарегистрируйтесь</a></p>
+    </form>
+</div>
+</body>
+</html>
